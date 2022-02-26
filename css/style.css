@@ -76,8 +76,53 @@ body{
     border: none;
     border-radius: 5px;
 }
+.mypic{
+    border-radius: 150px 150px 200px 200px;
+}
+/* end of main */
+
+/* about-me */
+/* .about-title */
+.tit{
+    text-align: center;
+    margin: 100px 0 50px;
+}
+.about-title{
+    font-size: 2rem;
+}
+.about-sub{
+    font-size: 13px;
+    opacity: 0.8;
+}
+.aboutme-btn{
+    padding: 10px 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+/* about-grid */
+.a-pic{
+    width: 400px;
+    border-radius: 10px;
+}
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.a-par{
+    width: 80%;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.about-num{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 30px;
+}
 
 @media(max-width: 400px){
+    /* main */
     #main{
         display: block;
     }
@@ -101,6 +146,38 @@ body{
         position: relative;
         bottom: 470px;
         left: 100px;
+        border-radius: 150px 150px 200px 200px;
+    }
+    /* about-me */
+    #about-me{
+        position: relative;
+        bottom: 150px;
+    }
+    .tit{
+        margin: 50px 0 50px 0;
+    }
+    .about-container{
+        display: block;
+    }
+    .a-pic{
+        width: 200px;
+        margin: auto;
+        display: block;
+    }
+    .num{
+        text-align: center;
+    }
+    .exp-num{
+        text-align: center;
+    }
+    .a-par{
+        text-align: center;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .aboutme-btn{
+        margin: auto;
+        display: block;
     }
 }
-/* end of main */
+
