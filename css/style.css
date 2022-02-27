@@ -89,10 +89,12 @@ body{
 }
 .about-title{
     font-size: 2rem;
+    color: var(--other-color)
 }
 .about-sub{
     font-size: 13px;
     opacity: 0.8;
+    color: var(--other-color)
 }
 .aboutme-btn{
     padding: 10px 15px;
@@ -114,11 +116,18 @@ body{
     width: 80%;
     line-height: 1.5;
     margin-bottom: 30px;
+    color: var(--other-color)
 }
 .about-num{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 30px;
+}
+.num{
+    color: var(--other-color)
+}
+.exp-num{
+    color: var(--other-color)
 }
 
 @media(max-width: 400px){
