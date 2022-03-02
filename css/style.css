@@ -2,16 +2,20 @@
     margin: 0;
 }
 body{
-    padding: 30px 100px;
     background-color: var(--primary-color);
     font-family: 'Poppins', sans-serif;
     color: var(--other-color);
+}
+.b-ody{
+    padding: 30px 100px;
 }
 :root{
     --primary-color: #f5f5f5;
     --secondary-color: #6557ff;
     --other-color: #020013;
     --box-shadow: 8px 8px 25px rgb(209, 209, 209);
+    --contact-box: #6557ff;
+    --contact: rgb(223, 223, 223);
     
 }
 .dark-theme{
@@ -21,6 +25,8 @@ body{
     --dark-background: #201d34;
     --dark-color: #6557ff;
     --box-shadow: 8px 8px 25px #020013;
+    --contact-box: #201d34;
+    --contact: #201d34;
 }
 /* Nvabar */
 .nav-bar{
@@ -48,6 +54,9 @@ body{
     display: grid;
     grid-template-rows: repeat(3, 70px);
     align-content: center;
+}
+.s-links{
+    color: var(--other-color);
 }
 .fab{
     margin: 0;
@@ -81,6 +90,10 @@ body{
 
 /* about-me */
 /* .about-title */
+#about-me{
+    width: 80%;
+    margin: auto;
+}
 .tit{
     text-align: center;
     margin: 100px 0 50px;
@@ -141,12 +154,122 @@ body{
 .s-icon{
     color: var(--dark-color);
 }
+/* new-project */
+#new-project{
+    margin-top: 150px;
+    padding: 100px 50px 50px;
+    border-radius: 10px;
+    background-color: var(--contact-box);
+    color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.project-btn{
+    padding: 15px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: var(--secondary-color);
+}
+.project-sub{
+    margin: 20px 0;
+}
+/* .contactme */
+/* first-grid */
+.contact-container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+}
+.con{
+    display: flex;
+}
+.con-titles{
+    margin: 0 0 10px 15px;
+}
+.con-subs{
+    margin-left: 45px;
+    margin-bottom: 50px;
+    font-size: 13px;
+    opacity: 0.8;
+    font-weight: 400;
+}
+.con-icon{
+    position: relative;
+    top: 10px;
+}
+/* second-grid */
+/* .name-email{
+    padding: 20px 100px 50px 20px;
+} */
+.contact-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 100px 200px 30px;
+    grid-template-areas: 
+    "n e"
+    "p p"
+    "m m"
+    "c c"
+    ;
+    gap: 20px;
+}
+input{
+    background-color: var(--contact);
+    border: none;
+    border-radius: 8px;
+    padding-left: 20px;
+}
+#name{
+    grid-area: n;
+}
+#email{
+    grid-area: e;
+}
+#project{
+    grid-area: p;
+}
+#message{
+    grid-area: m;
+}
+.con-btn{
+    grid-area: c;
+    place-self: flex-start;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: white;
+}
+/* footer */
+#footer{
+    background-color: var(--contact-box);
+    color: white;
+    padding: 100px;
+    margin-top: 100px;
+}
+.footer-container{
+    display: flex;
+    margin-bottom: 50px;
+}
+.foot-title{
+    margin: 0 270px 0 100px;
+}
+h5{
+    text-align: center;
+    margin-bottom: -80px;
+    opacity: 0.8;
+    font-weight: 400;
+} 
 @media(max-width: 400px){
     /* main */
     #main{
         display: block;
     }
-    body{
+    .b-ody{
         padding: 20px;
     }
     /* .nav-bar{
@@ -172,6 +295,7 @@ body{
     #about-me{
         position: relative;
         bottom: 150px;
+        width: 100%;
     }
     .tit{
         margin: 50px 0 50px 0;
@@ -213,5 +337,63 @@ body{
     }
     .sub-one{
         font-size: 13px;
+    }
+    /* new-project */
+    #new-project{
+        padding: 50px 30px;
+        text-align: center;
+        margin-top: 100px;
+    }
+    .project-title{
+        font-size: 19px;
+    }
+    .project-sub{
+        font-size: 13px;
+    }
+    /* contact-me */
+    .contact-container{
+        display: block;
+        width: 100%;
+    }
+    .contact-inputs{
+        display: block;
+    }
+    input{
+        padding: 10px 155px 50px 10px;
+        margin-bottom: 20px;
+    }
+    #message{
+        padding-bottom: 100px;
+    }
+    /* footer */
+    .footer-container{
+        display: block;
+        padding: 20px;
+    }
+    .foot-title{
+        margin-top: 10px;
+        position: relative;
+        bottom: 20px;
+        right: 120px;
+        width: 100%;
+    }
+    .f-title{
+        line-height: 2;
+    }
+    #footer{
+        margin-top: 80px;
+        padding: 20px 0 0 20px;
+    }
+    h5{
+        position: relative;
+        bottom: 20px;
+    }
+    .foot-socials{
+        display: grid;
+        position: relative;
+        right: 20px;
+    }
+    .f-icon{
+        margin-top: 20px;
     }
 }
